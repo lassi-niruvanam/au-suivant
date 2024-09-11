@@ -1,0 +1,48 @@
+{
+  "name": "au-suivant",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Julien Jean Malard-Adam",
+  "type": "module",
+  "types": "./dist/src/index.d.ts",
+  "exports": "./dist/src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "nettoyer": "rimraf dist",
+    "compiler": "pnpm versioner && pnpm nettoyer && pnpm tspc -p tsconfig.json",
+    "compiler:prod": "pnpm versioner && pnpm nettoyer && pnpm tspc -p tsconfig.build.json",
+    "test:node": "pnpm compiler && pnpm aegir test -t node --cov -- --exit",
+    "test:navig": "pnpm compiler && pnpm aegir test -t browser --cov",
+    "test:électron-principal": "pnpm compiler && pnpm aegir test -t electron-main --cov",
+    "test:électron-rendu": "pnpm compiler && pnpm aegir test -t electron-renderer --cov",
+    "test": "pnpm test:node && pnpm test:navig",
+    "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
+    "publier": "pnpm test && pnpm versioner && pnpm compiler:prod && (git commit -a -m 'version' || true) && pnpm publish",
+    "versioner": "pnpm genversion  --es6 --semi src/version.ts"
+  },
+  "watch": {
+    "build": {
+      "patterns": "./src/**/*",
+      "extensions": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "postbuild": "./dist/**/*"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "aegir": "^44.1.1",
+    "genversion": "^3.2.0",
+    "mocha": "^10.7.3",
+    "rimraf": "^6.0.1",
+    "ts-patch": "^3.2.1",
+    "typescript": "^5.5.4",
+    "typescript-transform-paths": "^3.5.0"
+  },
+  "dependencies": {
+    "deepmerge": "^4.3.1"
+  }
+}
