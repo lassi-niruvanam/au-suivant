@@ -1,5 +1,5 @@
 import {expect} from "aegir/chai";
-import {trouver} from "@/index.js";
+import {AuSuivant, trouver} from "@/index.js";
 
 describe("Disponibilité langues", function () {
     it("Langue disponible", async () => {
@@ -126,7 +126,19 @@ describe("Résolution", function () {
       expect(trouvé).to.eq("itl");
     });
 
-    it.skip("Multiples désirées", async () => {
+    it("Multiples désirées", async () => {
+      const trouvé = trouver({
+        désirées: ["fra", "ctl"],
+        disponibles: ["itl", "ctl", "ptg"],
+        données: {
+          fra: ["cst", "ctl", "ptg"],
+          ctl: ["occ", "itl"]
+        }
+      })
+      expect(trouvé).to.eq("ctl");
+    });
+
+    it("Multiples désirées - priorité premier de fil", async () => {
       const trouvé = trouver({
         désirées: ["fra", "ctl"],
         disponibles: ["itl", "occ", "ptg"],
@@ -135,8 +147,8 @@ describe("Résolution", function () {
           ctl: ["occ", "itl"]
         }
       })
-      expect(trouvé).to.eq("occ");
-    })
+      expect(trouvé).to.eq("ptg");
+    });
 
     it("Circulairité", async () => {
       const trouvé = trouver({
@@ -149,4 +161,15 @@ describe("Résolution", function () {
       })
       expect(trouvé).to.eq("occ");
     });
+});
+
+
+describe("Au suivant", function () {
+  let auSuivant: AuSuivant;
+  before(()=>{
+    auSuivant = new AuSuivant();
+  })
+  it("Langue écrite", async () => {
+    auSuivant.résoudre({ désirées: "हिं", disponibles: ["राज"], voie: "écrite" })
+  })
 });

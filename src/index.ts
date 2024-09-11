@@ -70,7 +70,7 @@ export class AuSuivant {
         return merge(_écrit, this._données_écrites_constl);
     }
 
-    trouver ({
+    résoudre({
         désirées,
         disponibles, 
         voie = "écrite" 
