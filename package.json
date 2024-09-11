@@ -6,6 +6,7 @@
   "type": "module",
   "types": "./dist/src/index.d.ts",
   "exports": "./dist/src/index.js",
+  "private": false,
   "engines": {
     "node": ">=20"
   },
