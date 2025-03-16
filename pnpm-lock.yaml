@@ -35,7 +35,7 @@ importers:
         version: 5.8.2
       typescript-transform-paths:
         specifier: ^3.5.0
-        version: 3.5.4(typescript@5.8.2)
+        version: 3.5.5(typescript@5.8.2)
 
 packages:
 
@@ -958,6 +958,12 @@ packages:
 
   '@eslint-community/eslint-utils@4.4.1':
     resolution: {integrity: sha512-s3O3waFUrMV8P/XaF/+ZTp1X9XBZW1a4B97ZnjQF2KYWaFD2A8KyFBsrsfSjEmjn3RGWAIuvlneuZm3CUK3jbA==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
+
+  '@eslint-community/eslint-utils@4.5.1':
+    resolution: {integrity: sha512-soEIOALTfTK6EjmKMMoLugwaP0rzkad90iIWd1hMO9ARkSAyjfMfkRRhLvD5qH7vvM0Cg72pieUfR6yh6XxC4w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
@@ -5228,8 +5234,8 @@ packages:
     peerDependencies:
       typescript: '>3.8.3'
 
-  typescript-transform-paths@3.5.4:
-    resolution: {integrity: sha512-Yw/cLiwAlaTIYvO3wbCqiBIppTzsY45CBi1y+oedjtgcGMIy4xmI9ylkFiDlX2jqMqA1SY58vFPI4Y8VKkBCpA==}
+  typescript-transform-paths@3.5.5:
+    resolution: {integrity: sha512-RMK86wKe/4+ad+3kMT9SKAs3K0tUHLe7hF+MLbD6VpC9VUmFuKorhf3pHz+qO5GdS4mUp2ncNUo14j6ws9UvBQ==}
     peerDependencies:
       typescript: '>=3.6.5'
 
@@ -6380,6 +6386,11 @@ snapshots:
     optional: true
 
   '@eslint-community/eslint-utils@4.4.1(eslint@8.57.1)':
+    dependencies:
+      eslint: 8.57.1
+      eslint-visitor-keys: 3.4.3
+
+  '@eslint-community/eslint-utils@4.5.1(eslint@8.57.1)':
     dependencies:
       eslint: 8.57.1
       eslint-visitor-keys: 3.4.3
@@ -8194,7 +8205,7 @@ snapshots:
 
   eslint-plugin-es-x@7.8.0(eslint@8.57.1):
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.1(eslint@8.57.1)
+      '@eslint-community/eslint-utils': 4.5.1(eslint@8.57.1)
       '@eslint-community/regexpp': 4.12.1
       eslint: 8.57.1
       eslint-compat-utils: 0.5.1(eslint@8.57.1)
@@ -8266,7 +8277,7 @@ snapshots:
 
   eslint-plugin-n@16.0.1(eslint@8.57.1):
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.1(eslint@8.57.1)
+      '@eslint-community/eslint-utils': 4.5.1(eslint@8.57.1)
       builtins: 5.1.0
       eslint: 8.57.1
       eslint-plugin-es-x: 7.8.0(eslint@8.57.1)
@@ -11484,7 +11495,7 @@ snapshots:
       - '@swc/wasm'
       - '@types/node'
 
-  typescript-transform-paths@3.5.4(typescript@5.8.2):
+  typescript-transform-paths@3.5.5(typescript@5.8.2):
     dependencies:
       minimatch: 9.0.5
       typescript: 5.8.2
