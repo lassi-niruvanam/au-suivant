@@ -16,8 +16,8 @@ importers:
         specifier: ^10.0.7
         version: 10.0.10
       aegir:
-        specifier: ^45.0.0
-        version: 45.2.1(@babel/core@7.26.10)(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.8.3))(eslint-plugin-n@16.0.1(eslint@8.57.1))
+        specifier: ^46.0.0
+        version: 46.0.0(@babel/core@7.26.10)(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.8.3))(eslint-plugin-n@16.0.1(eslint@8.57.1))
       genversion:
         specifier: ^3.2.0
         version: 3.2.0
@@ -1429,8 +1429,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  aegir@45.2.1:
-    resolution: {integrity: sha512-3w9s0tOvo2iNW3efMmaFC6hG3uNDt1a/ZN5nTmYUqcpHKH1aw55sLgbmK29+ij/QigGCo8f5xr3nMVOdiI0hmA==}
+  aegir@46.0.0:
+    resolution: {integrity: sha512-z/4sAbDViOExybcWVUO6pjMFuiSo4vi84rEPE6e1B8GeYbMXQbS/1Di6YmBQP4A/QHGs630hQ0S7mgq+vBjzRw==}
     hasBin: true
 
   agent-base@7.1.3:
@@ -2348,8 +2348,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-ipfs@7.0.6:
-    resolution: {integrity: sha512-iID549DDGU+loFaTF9Oo6oxFyPstFvzRG9jjNP15+qpPeKxPXT8MCh6KL6b4TUaXlBD3znw32uag2zRVG+O/rQ==}
+  eslint-config-ipfs@8.0.0:
+    resolution: {integrity: sha512-aqZJ02tDpu118Bc8+QN1qBqXab+YIARTRitv6VrUW9Jc2RFjNvx1yBKgq7/ENX3b1a3Sl4s5oA1CjtZjihc3OA==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
     peerDependencies:
       typescript: '*'
@@ -6963,7 +6963,7 @@ snapshots:
 
   acorn@8.14.1: {}
 
-  aegir@45.2.1(@babel/core@7.26.10)(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.8.3))(eslint-plugin-n@16.0.1(eslint@8.57.1)):
+  aegir@46.0.0(@babel/core@7.26.10)(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.8.3))(eslint-plugin-n@16.0.1(eslint@8.57.1)):
     dependencies:
       '@electron/get': 3.1.0
       '@polka/send-type': 0.5.2
@@ -6998,7 +6998,7 @@ snapshots:
       env-paths: 3.0.0
       esbuild: 0.25.3
       eslint: 8.57.1
-      eslint-config-ipfs: 7.0.6(eslint-plugin-n@16.0.1(eslint@8.57.1))(eslint@8.57.1)(typescript@5.8.3)
+      eslint-config-ipfs: 8.0.0(eslint-plugin-n@16.0.1(eslint@8.57.1))(eslint@8.57.1)(typescript@5.8.3)
       eslint-plugin-etc: 2.0.3(eslint@8.57.1)(typescript@5.8.3)
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.8.3))(eslint@8.57.1)
       eslint-plugin-jsdoc: 48.11.0(eslint@8.57.1)
@@ -8148,7 +8148,7 @@ snapshots:
       eslint: 8.57.1
       semver: 7.7.1
 
-  eslint-config-ipfs@7.0.6(eslint-plugin-n@16.0.1(eslint@8.57.1))(eslint@8.57.1)(typescript@5.8.3):
+  eslint-config-ipfs@8.0.0(eslint-plugin-n@16.0.1(eslint@8.57.1))(eslint@8.57.1)(typescript@5.8.3):
     dependencies:
       '@typescript-eslint/eslint-plugin': 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.8.3))(eslint@8.57.1)(typescript@5.8.3)
       '@typescript-eslint/parser': 7.18.0(eslint@8.57.1)(typescript@5.8.3)
