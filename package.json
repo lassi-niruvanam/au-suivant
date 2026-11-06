@@ -41,7 +41,7 @@
     "rimraf": "^6.0.1",
     "ts-patch": "^3.2.1",
     "typescript": "^5.5.4",
-    "typescript-transform-paths": "^3.5.0"
+    "typescript-transform-paths": "^4.0.0"
   },
   "dependencies": {
     "deepmerge": "^4.3.1"
